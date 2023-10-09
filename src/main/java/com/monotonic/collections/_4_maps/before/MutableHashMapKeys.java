@@ -16,10 +16,23 @@ public class MutableHashMapKeys
         brokenMap.put(key, value);
 
         System.out.println(brokenMap.get(key));
+        // abc = {abc}
         System.out.println(brokenMap);
-
+        //key is set to def, but the hashmap key is still abc?
         key.set("def");
 
+        //why would this give null? and not def?
+        /*
+        However, when you call key.set("def"), you're effectively modifying the key
+        object itself. If the key object's hash code or equality has
+        changed, the HashMap may not be able to locate the corresponding
+        value because it's searching for the key based on its old hash code
+        and equality.
+
+        When you print brokenMap.get(key) after changing the key to "def", '
+        it returns null because the HashMap cannot find a key "def"
+        with the modified key object.
+         */
         System.out.println(brokenMap.get(key));
         System.out.println(brokenMap);
     }
