@@ -52,4 +52,22 @@ Sets are unordered collections of unique values and are a subtype of the Collect
 
 - **Complex Operations**: For complex set operations, such as union and intersection, consider using Venn diagrams as a visualization tool.
 
-- **Hashcode and Equals**: HashMap and HashSet classes use a hashcode to find an empty slot. This implies that if an object equals another object, both should have the same hashcode and the same slot. 
+- **Hashcode and Equals**: HashMap and HashSet classes use a hashcode to find an empty slot. This implies that if an object equals another object, both should have the same hashcode and the same slot.
+# Streams
+Certainly, here's your text formatted in the provided format:
+
+- **Streams**
+
+  - **Problem with foreach and iterators:**
+    - They are low-level coding constructs.
+    - They involve a lot of boilerplate code whenever we want to use them, which leads to worse readability and maintainability.
+
+  - **Two types of stream operations:**
+    - **Intermediate (Everything but last):** These operations return a stream as a return type. This allows us to chain more streams together, hence the term "intermediate."
+    - **Terminal (Last in pipeline):** Terminal stream operations return the value as a return type. They are the last stream operations within a pipeline and are the ones that end the chain.
+
+  - **The collector:**
+    - The collector is a special terminal operation that allows us to build more complicated and interesting values that result from streams. It tells the stream how to build a particular type of value.
+
+  - **Streams are not always better than loops!**
+    - It's important to note that streams are not always superior to loops. For example, loops work better with checked exceptions.
