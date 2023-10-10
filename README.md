@@ -53,10 +53,8 @@ Sets are unordered collections of unique values and are a subtype of the Collect
 - **Complex Operations**: For complex set operations, such as union and intersection, consider using Venn diagrams as a visualization tool.
 
 - **Hashcode and Equals**: HashMap and HashSet classes use a hashcode to find an empty slot. This implies that if an object equals another object, both should have the same hashcode and the same slot.
+  
 # Streams
-Certainly, here's your text formatted in the provided format:
-
-- **Streams**
 
 Provide a way of performing aggregate operations over a collection.
 
