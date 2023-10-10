@@ -67,3 +67,34 @@ Provide a way of performing aggregate operations over a collection.
   - **The collector:**: The collector is a special terminal operation that allows us to build more complicated and interesting values that result from streams. It tells the stream how to build a particular type of value.
 
   - **Streams are not always better than loops!**: It's important to note that streams are not always superior to loops. For example, loops work better with checked exceptions.
+
+# Collection Operations and Factories
+
+In the JDK (Java Development Kit), there are various useful utilities and methods for creating different collections without the need for specific interfaces and implementations.
+
+## Factories
+
+Factories are methods that generate new instances of collections, including unmodifiable, immutable, empty, or wrapping collections.
+
+- `Collections.unmodifiableList`: This method creates an unmodifiable list, preventing any modifications. Attempting to remove an object will result in an error.
+
+- `Collections.unmodifiableMap` vs. `Map.copyOf`: Both methods create unmodifiable maps, preventing direct changes. However, `unmodifiableMap` reflects changes within the original map, while `copyOf` does not. It's important to note that `copyOf` does not allow null values.
+
+- `List.of`, `Map.of`, etc.: These methods create immutable collections without the need for explicit instantiation. They provide a convenient way to create read-only collections.
+
+## Operations
+
+Operations in the JDK refer to useful algorithms and actions that can be performed on collections.
+
+- `Collections.rotate` and `Collections.shuffle`: These methods work as their names suggest. `rotate` performs a rotation operation on a list, while `shuffle` shuffles the elements randomly.
+
+## Immutable vs. Unmodifiable
+
+Understanding the difference between immutable and unmodifiable collections is crucial:
+
+- Immutable collections cannot be changed once they are created. They are like locked objects.
+
+- Unmodifiable collections provide a protected view of the original collection and cannot be changed directly. They reflect changes in the original collection.
+
+In summary, the JDK provides a variety of tools and methods for working with collections, allowing you to create and manipulate them effectively.
+
