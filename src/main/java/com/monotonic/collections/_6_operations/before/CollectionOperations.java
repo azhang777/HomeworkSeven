@@ -18,6 +18,10 @@ public class CollectionOperations
     {
         var products = new ArrayList<>(List.of(window, floorPanel, door));
         System.out.println(products);
+
+        Collections.rotate(products,2);
+
+        System.out.println(products);
     }
 
     private static List<Character> makeAlphabet()
